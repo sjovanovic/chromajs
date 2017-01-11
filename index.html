@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>WebGL Chroma key from img element</title>
+<style>
+body{
+	background-image: url('bg.png'); background-color:#469BC2; font-size:35px; font-family: Sans-Serif;
+	color:#666;
+}
+h2,pre{background-color:#fff;opacity:0.7;color:#333;}
+pre{font-size:30px;}
+</style>
+
+<script src="chroma.js"></script>
+<script>
+
+function startChroma(){
+
+  chroma = new Chroma()
+  chroma.chromaKey(document.getElementById('my_image'));
+
+}
+
+</script>
+
+</head>
+<body onload="startChroma()">
+<h2>&nbsp;Chroma.js</h2>
+<img src="couch.jpeg" id="my_image" /> vs the original <img src="couch.jpeg" />
+
+<pre>
+  var chroma = new Chroma()
+  chroma.chromaKey(document.getElementById('my_image'));
+</pre>
+
+</body>
+</html>
